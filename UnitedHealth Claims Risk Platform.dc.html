@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #e9edf1; }
+    doc-page:not(:defined) { visibility: hidden; }
+    ::selection { background: #cfe0ea; }
+  </style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" orientation="portrait" margin="0.65in" hint-size="8.5in,11in">
+
+  <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:3px solid #0a2540; padding-bottom:14px; margin-bottom:22px;">
+    <div>
+      <div style="font-family:'Source Serif 4', Georgia, serif; font-weight:700; font-size:26px; color:#0a2540; letter-spacing:-0.01em;">UnitedHealth Group</div>
+      <div style="font-family:'IBM Plex Sans', sans-serif; font-size:14px; color:#3d5a73; margin-top:2px;">Healthcare Claims Risk Prediction &amp; Cost Optimization Platform</div>
+    </div>
+    <div style="font-family:'IBM Plex Sans', sans-serif; font-size:11px; color:#6b7f8f; text-align:right; white-space:nowrap;">Project&nbsp;01</div>
+  </div>
+
+  <div style="font-family:'IBM Plex Sans', sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#0f6e5c; margin-bottom:6px;">Project Objective</div>
+  <p style="font-family:'IBM Plex Sans', sans-serif; font-size:14px; line-height:1.55; color:#1c2b36; margin:0 0 22px 0;">
+    Developed an advanced machine learning platform to identify high-risk members, predict future healthcare costs, and support care-management teams in prioritizing interventions.
+  </p>
+
+  <div style="font-family:'IBM Plex Sans', sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#0f6e5c; margin-bottom:8px;">Key Responsibilities</div>
+  <ul style="font-family:'IBM Plex Sans', sans-serif; font-size:13.5px; line-height:1.6; color:#1c2b36; margin:0 0 24px 0; padding-left:18px;">
+    <li style="margin-bottom:7px;">Processed large-scale healthcare claims, pharmacy, provider, eligibility, and demographic datasets using Python, SQL, pandas, and PySpark.</li>
+    <li style="margin-bottom:7px;">Built member-level features such as prior claims cost, hospital visits, chronic conditions, medication history, provider utilization, and cost trends.</li>
+    <li style="margin-bottom:7px;">Developed classification and regression models using XGBoost, LightGBM, CatBoost, Random Forest, and PyTorch.</li>
+    <li style="margin-bottom:7px;">Used Optuna for automated hyperparameter tuning and improved model selection through stratified cross-validation.</li>
+    <li style="margin-bottom:7px;">Addressed class imbalance using class weighting, SMOTE, threshold optimization, and cost-sensitive learning.</li>
+    <li style="margin-bottom:7px;">Applied SHAP to explain model predictions and identify the main factors contributing to member risk.</li>
+    <li style="margin-bottom:7px;">Evaluated models using ROC-AUC, PR-AUC, recall, precision, F1-score, calibration, MAE, and RMSE.</li>
+    <li style="margin-bottom:7px;">Tracked experiments, model versions, parameters, and performance metrics using MLflow.</li>
+    <li style="margin-bottom:7px;">Deployed real-time risk-scoring services using FastAPI, Docker, and cloud-based endpoints.</li>
+    <li style="margin-bottom:7px;">Implemented model monitoring using Evidently, Prometheus, and Grafana to detect data drift, prediction drift, and performance degradation.</li>
+    <li style="margin-bottom:0;">Collaborated with healthcare analytics, care-management, engineering, and business teams to translate model outputs into actionable member-risk segments.</li>
+  </ul>
+
+  <div style="font-family:'IBM Plex Sans', sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#0f6e5c; margin-bottom:10px;">Technology Stack</div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <sc-for list="{{ stack }}" as="tech" hint-placeholder-count="20">
+      <span style="font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:500; color:#0a2540; background:#eef2f5; border:1px solid #d5dee5; border-radius:4px; padding:4px 10px;">{{ tech }}</span>
+    </sc-for>
+  </div>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      stack: ["Python", "SQL", "PySpark", "pandas", "NumPy", "scikit-learn", "XGBoost", "LightGBM", "CatBoost", "PyTorch", "Optuna", "SHAP", "MLflow", "FastAPI", "Docker", "Evidently", "Prometheus", "Grafana", "AWS", "Azure"]
+    };
+  }
+}
+</script>
+</body>
+</html>
